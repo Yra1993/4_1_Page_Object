@@ -12,3 +12,5 @@ class LoginPageLocators():
     BASKET_PRODUCT = (By.CSS_SELECTOR, "[class='alert alert-safe alert-noicon alert-success  fade in']")
     PRODUCT_INPUT_BASKET_MESSAGE = (By.CSS_SELECTOR, "[class='alert alert-safe alert-noicon alert-success  fade in']")
     PRODUCT_NAME=(By.CSS_SELECTOR, ".product_main h1")
+    PRODUCT_PRICE=(By.CSS_SELECTOR, ".product_main p")
+    PRODUCT_PRICE_INPUT_BASKET_MESSAGE=(By.CSS_SELECTOR, "[class='alert alert-safe alert-noicon alert-info  fade in']")

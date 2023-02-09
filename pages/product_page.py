@@ -17,3 +17,11 @@ class ProductPage(BasePage):
         PRODUCT_NAME = PRODUCT_NAME.text
         assert PRODUCT_NAME in PRODUCT_BASKET_MESSAGE, "Login url is not corect"
         print(f"{PRODUCT_NAME} был добавлен в вашу корзину")
+    def chek_product_price_inside_basket(self):
+        #MainPage.go_to_login_page()
+        PRODUCT_PRICE_INPUT_BASKET_MESSAGE = self.browser.find_element(*LoginPageLocators.PRODUCT_PRICE_INPUT_BASKET_MESSAGE)
+        PRODUCT_PRICE_INPUT_BASKET_MESSAGE = PRODUCT_PRICE_INPUT_BASKET_MESSAGE.text
+        PRODUCT_PRICE=self.browser.find_element(*LoginPageLocators.PRODUCT_PRICE)
+        PRODUCT_PRICE = PRODUCT_PRICE.text
+        assert PRODUCT_PRICE in PRODUCT_PRICE_INPUT_BASKET_MESSAGE, "Login url is not corect"
+        print(f"Цена в корзине равна цене товара")
