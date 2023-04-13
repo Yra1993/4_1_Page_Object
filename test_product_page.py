@@ -25,3 +25,4 @@ def test_guest_can_add_product_to_basket(browser, link):
     page.chek_product_inside_basket()
     page.chek_product_price_inside_basket()
     #time.sleep(1000)
+    

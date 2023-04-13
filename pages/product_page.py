@@ -25,3 +25,9 @@ class ProductPage(BasePage):
         PRODUCT_PRICE = PRODUCT_PRICE.text
         assert PRODUCT_PRICE == PRODUCT_PRICE_INPUT_BASKET_MESSAGE, f"Problem url is {self.browser.current_url}"
         print(f"Цена в корзине равна цене товара")
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*LoginPageLocators.PRODUCT_INPUT_BASKET_MESSAGE), \
+          "Success message is presented, but should not be"
+    def should_not_be_success_message_is_disappeared(self):
+        assert self.is_disappeared(*LoginPageLocators.PRODUCT_INPUT_BASKET_MESSAGE), \
+          "Success message is presented, but should not be"
